@@ -116,9 +116,9 @@ function applyRule(rule) {
                 break;
             }
             case RULE_TYPES.GET_X_FOR_Y: {
-                if (!isNaN(rule.x) && !isNaN(rule.y) && rule.x > 0 && rule.y > 0 && x > y) {
+                if (!isNaN(rule.x) && !isNaN(rule.y) && rule.x > 0 && rule.y > 0 && rule.x > rule.y) {
                     let ys = 0;
-                    let residue = x - y;
+                    let residue = rule.x - rule.y;
                     let residue2 = 0;
                     for (let i of cart) {
                         if (rule.product_id == i.id) {
@@ -127,11 +127,13 @@ function applyRule(rule) {
                             }
                             else {
                                 residue2--;
-                                rule.unit_cost = 0;
+                                i.unit_cost = 0;
+                                continue;
                             }
-                        }
-                        if (ys == y) {
-                            residue2 = residue;
+                            if (ys == rule.y) {
+                                residue2 = residue;
+                                ys = 0;
+                            }
                         }
 
                     }
