@@ -26,5 +26,19 @@
     "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^3.0.0"
-  }
+  },
+  "description": " Rule engine for a POS Cart ",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaymankala/pos-rules.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaymankala/pos-rules/issues"
+  },
+  "homepage": "https://github.com/chaymankala/pos-rules#readme"
 }
