@@ -152,5 +152,6 @@ export default {
     remove,
     total,
     clearCart,
-    clearRules
+    clearRules,
+    RULE_TYPES
 };
